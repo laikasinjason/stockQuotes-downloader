@@ -50,8 +50,10 @@ public class CsvUtils {
         }
         sb.append("\n");
         w.append(sb.toString());
+    }
 
-
+    public static void writeRawString(Writer w, String value) throws IOException {
+        w.append(value + "\n");
     }
 
 }

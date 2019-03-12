@@ -30,4 +30,9 @@ public class CsvWriter {
     }
 
 
+    public void writeRawString(String s) throws IOException {
+        log.info("Writing rawString {} to file {}", s, csvFileName);
+
+        CsvUtils.writeRawString(writer, s);
+    }
 }

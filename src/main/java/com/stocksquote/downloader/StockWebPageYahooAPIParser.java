@@ -81,7 +81,7 @@ public class StockWebPageYahooAPIParser {
             CsvWriter csvWriter = new CsvWriter(csvFileToSave);
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-
+            csvWriter.writeRawString("Date,RIC,Open,High,Low,Close,Adj Close,Volume");
             List<HistoricalQuote> historicalQuotes = stock.getHistory();
             for (HistoricalQuote historicalQuote : historicalQuotes) {
                 List<String> strLine = new ArrayList<>();
